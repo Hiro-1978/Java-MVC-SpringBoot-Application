@@ -1,5 +1,6 @@
 package com.hiro11.fleeapp.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,21 +19,26 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class State {
-
+public class Location {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private String name;
-	private String capital;
-	private String code;
-
-	@ManyToOne
-	@JoinColumn(name = "countryid", insertable = false, updatable = false)
-	private Country country;
-
-	private Integer countryid;
-
+	
+	private String description;
 	private String details;
-
+	
+	@ManyToOne
+	@JoinColumn(name="countryid", insertable=false, updatable=false)
+	private Country country;
+	private Integer countryid;
+	
+	@ManyToOne
+	@JoinColumn(name="stateid", insertable=false, updatable=false)
+	private State state;	
+	private Integer stateid;
+		
+	private String city;
+	private String address;			
 }
