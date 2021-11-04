@@ -23,7 +23,7 @@ public class CountryController {
 	@GetMapping("countries")
 	public String findAll(Model model){		
 		model.addAttribute("countries", countryService.findAll());
-		return "country";
+		return "country";		
 	}	
 	
 	@RequestMapping("countries/findById") 

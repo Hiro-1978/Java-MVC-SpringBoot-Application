@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Profile | Creative - Bootstrap 3 Responsive Admin Template</title>
+  <title>Profile</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+      <a class="logo"  th:href="@{/}">FLEE <span class="lite">APP</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -310,7 +310,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
-            <a class="" href="index.html">
+            <a class="" th:href="@{/}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -318,65 +318,89 @@
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Forms</span>
+                          <span>Vehicles</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
+              <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
+              <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
+              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+              <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
+                          <i class="icon_cogs"></i>
+                          <span>Parameters</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="general.html">Components</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
+              <li><a class="" th:href="@{/vehicleMakes}">Vehicle Makes</a></li>
+              <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
+              <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
+              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
             </ul>
           </li>
-          <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="fa fa-users"></i>
+                          <span>People</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
+            <ul class="sub">
+              <li><a class="" th:href="@{/employees}">Employee</a></li>
+              <li><a class="" th:href="@{/clients}">Clients</a></li>
+              <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
+              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+              <li><a class="" th:href="@{/users}">Users</a></li>
+            </ul>
           </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
                           <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
-                      </a>
-
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
+                          <span>HR Settings</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
+              <li><a class="" th:href="@{/employeeTypes}">Employee Type</a></li>
             </ul>
           </li>
-
-          <li class="sub-menu">
+           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
+                          <i class="fa fa-usd"></i>
+                          <span>Accounts</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
+              <li><a class="" th:href="@{/invoices}">Invoices</a></li>
+              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
             </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_globe"></i>
+                          <span>Globals</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" th:href="@{/countries}">Countries</a></li>
+              <li><a class="" th:href="@{/states}">States</a></li>
+              <li><a class="" th:href="@{/locations}">Locations</a></li>
+            </ul>
+          </li>
+     
+         <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_book"></i>
+                          <span>Reports</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>                         
+                      </a>
+            <ul class="sub">
+              <li><a class="" th:href="@{/blank}">Vehicle Reports</a></li>
+              <li><a class="" th:href="@{/blank}">Employee Reports</a></li>
+              <li><a class="" th:href="@{/blank}">Accounts Reports</a></li>
+            </ul>                      
           </li>
 
         </ul>
