@@ -10,13 +10,12 @@ import com.hiro11.fleeapp.repositories.CountryRepository;
 
 @Service
 public class CountryService {
-
+	
 	@Autowired
 	private CountryRepository countryRepository;
-
-	// Return list of countries
+	
+	//Return list of countries
 	public List<Country> getCountries(){
 		return countryRepository.findAll();
 	}
-
 }
