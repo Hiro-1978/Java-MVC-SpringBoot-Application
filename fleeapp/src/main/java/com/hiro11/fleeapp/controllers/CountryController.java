@@ -26,8 +26,7 @@ public class CountryController {
 
     @RequestMapping("countries/findById")
     @ResponseBody
-    public Optional<Country> findById(Integer id)
-    {
+    public Optional<Country> findById(int id) {
         return countryService.findById(id);
     }
 
