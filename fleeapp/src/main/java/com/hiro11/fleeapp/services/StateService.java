@@ -15,7 +15,7 @@ public class StateService {
     private StateRepository stateRepository;
 
     //Get All States
-    public List<State> findAll(){
+    public List<State> getState(){
         return stateRepository.findAll();
     }
 
@@ -30,7 +30,7 @@ public class StateService {
     }
 
     //Update State
-    public void save( State state) {
+    public void save(State state) {
         stateRepository.save(state);
     }
 }

@@ -20,7 +20,7 @@ public class StateController {
         //Get All States
         @GetMapping("states")
         public String findAll(Model model){
-            model.addAttribute("states", stateService.findAll());
+            model.addAttribute("states", stateService.getState());
             model.addAttribute("countries", countryService.getCountries());
             return "state";
         }
