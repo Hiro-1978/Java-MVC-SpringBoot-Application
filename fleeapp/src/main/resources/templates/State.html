@@ -438,24 +438,27 @@
                           <tbody>
                           <tr>
                               <th><i class="icon_table"></i> Id</th>
-                              <th><i class="icon_table"></i>Description</th>
-                              <th><i class="icon_table"></i> Details</th>
+                              <th><i class="icon_table"></i>Name</th>
+                              <th><i class="icon_table"></i> Capital</th>
+                              <th><i class="icon_table"></i> Code</th>
                               <th><i class="icon_cogs"></i> Action</th>
                           </tr>
                           <tr th:each="state:${states}">
                               <td th:text="${state.id}">Id</td>
                               <td th:text="${state.name}">Name</td>
-                              <td th:text="${state.details}">Details</td>
+                              <td th:text="${state.capital}">Capital</td>
+                              <td th:text="${state.code}">Code</td>
                               <td>
                                   <div class="btn-group">
                                       <a th:href="@{/states/findById/(id=${state.id})}" class="btn btn-primary" id="editButton"><i class="icon_pencil-edit"></i></a>
-                                      <a th:href="@{/states/findById/(id=${state.id})}" class="btn btn-success" id="detailsButton" ><i class="icon_document_alt"></i></a>
+                                      <a class="btn btn-success" id="detailsButton" ><i class="icon_document_alt"></i></a>
                                       <a th:href="@{/states/delete/(id=${state.id})}" class="btn btn-danger"  id="deleteButton" ><i class="icon_close_alt2"></i></a>
                                   </div>
                               </td>
                           </tr>
                           </tbody>
                       </table>
+
                   </section>
               </div>
           </div>

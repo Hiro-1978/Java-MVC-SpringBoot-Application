@@ -1,6 +1,8 @@
 package com.hiro11.fleeapp.controllers;
 
+import com.hiro11.fleeapp.models.Country;
 import com.hiro11.fleeapp.models.Location;
+import com.hiro11.fleeapp.models.State;
 import com.hiro11.fleeapp.services.CountryService;
 import com.hiro11.fleeapp.services.LocationService;
 import com.hiro11.fleeapp.services.StateService;
@@ -23,10 +25,15 @@ public class LocationController {
     private StateService stateService;
 
     @GetMapping("locations")
-    public String findAll(Model model){
-        model.addAttribute("locations", locationService.findAll());
-        model.addAttribute("countries", countryService.findAll());
-        model.addAttribute("states", stateService.findAll());
+    public String findAll(Model model) {
+
+        List<State> stateList = stateService.getState();
+        List<Country> countryList = countryService.getCountries();
+        List<Location> locationList = locationService.getLocations();
+
+        model.addAttribute("countries", countryList);
+        model.addAttribute("states", stateList);
+        model.addAttribute("locations", locationList);
 
         return "location";
     }
@@ -34,12 +41,8 @@ public class LocationController {
     @GetMapping("locations/findById")
     @ResponseBody
     public Optional<Location> findById(Integer id) {
-        return locationService.findById(id);
-    }
 
-    @GetMapping("locations/findByDescriptionContaining/{description}")
-    public List<Location> findByDescriptionContaining(@PathVariable("description") String description) {
-        return locationService.findByDescriptionContaining(description);
+        return locationService.findById(id);
     }
 
     @PostMapping("locations/addNew")
@@ -48,15 +51,15 @@ public class LocationController {
         return "redirect:/locations";
     }
 
-    @RequestMapping(value="locations/update", method = {RequestMethod.PUT, RequestMethod.GET})
+    @RequestMapping(value = "locations/update", method = {RequestMethod.PUT, RequestMethod.GET})
     public String update(Location location) {
         locationService.save(location);
         return "redirect:/locations";
     }
 
-    @RequestMapping(value="locations/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
-    public String deleteById(Integer id) {
-        locationService.deleteById(id);
+    @RequestMapping(value = "locations/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
+    public String delete(int id) {
+        locationService.delete(id);
         return "redirect:/locations";
     }
 }

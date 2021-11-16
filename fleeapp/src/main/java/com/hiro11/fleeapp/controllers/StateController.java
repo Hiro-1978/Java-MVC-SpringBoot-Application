@@ -13,7 +13,6 @@ import java.util.Optional;
 @Controller
 public class StateController {
 
-
     @Autowired
     private StateService stateService;
     @Autowired private CountryService countryService;
