@@ -513,7 +513,7 @@
                       </div>
 
                       <div class="form-group">
-                          <label for="ddlInvoiceStatsAdd" class="col-form-label">Invoice Status: </label>
+                          <label for="ddlInvoiceStatusAdd" class="col-form-label">Invoice Status: </label>
                           <select class="form-control" id="ddlInvoiceStatusAdd" name="invoicestatusid">
                               <option>-SELECT-</option>
                               <option th:each="invoiceStatus : ${invoiceStatuses}"
@@ -572,8 +572,8 @@
                       </div>
 
                       <div class="form-group">
-                          <label for="ddlInvoiceStatusEdit" class="col-form-label">Invoice Status: </label>
-                          <select class="form-control" id="ddlInvoiceStatusEdit" name="invoicestatusid">
+                          <label for="ddlStatusEdit" class="col-form-label">Invoice Status: </label>
+                          <select class="form-control" id="ddlStatusEdit" name="invoicestatusid">
                               <option>-SELECT-</option>
                               <option th:each="invoiceStatus : ${invoiceStatuses}"
                                       th:value="${invoiceStatus.id}"
@@ -631,8 +631,8 @@
                       </div>
 
                       <div class="form-group">
-                          <label for="ddlInvoiceStatusDetails" class="col-form-label">Invoice Status: </label>
-                          <select class="form-control" id="ddlInvoiceStatusDetails" name="invoicestatusid">
+                          <label for="ddlStatusDetails" class="col-form-label">Invoice Status: </label>
+                          <select class="form-control" id="ddlStatusDetails" name="invoicestatusid">
                               <option>-SELECT-</option>
                               <option th:each="invoiceStatus : ${invoiceStatuses}"
                                       th:value="${invoiceStatus.id}"
@@ -668,7 +668,7 @@
                   <p>Are you sure you want to delete this record?</p>
               </div>
               <div class="modal-footer">
-                  <a href="" class="btn btn-primary" id="delRef">Yes, Delete</a>
+                  <a href="" class="btn btn-primary" id="confirmDeleteButton">Yes, Delete</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
           </div>
