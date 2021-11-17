@@ -22,7 +22,7 @@ public class ClientController {
 
     //Get All Clients
     @GetMapping("/clients")
-    public String findAll(Model model){
+    public String findAll(Model model) {
         model.addAttribute("countries", countryService.getCountries());
         model.addAttribute("states", stateService.getState());
         model.addAttribute("clients", clientService.getClients());
@@ -31,25 +31,24 @@ public class ClientController {
 
     @RequestMapping("clients/findById")
     @ResponseBody
-    public Optional<Client> findById(Integer id)
-    {
+    public Optional<Client> findById(Integer id) {
         return clientService.findById(id);
     }
 
     //Add Client
-    @PostMapping(value="clients/addNew")
+    @PostMapping(value = "clients/addNew")
     public String addNew(Client client) {
         clientService.save(client);
         return "redirect:/clients";
     }
 
-    @RequestMapping(value="clients/update", method = {RequestMethod.PUT, RequestMethod.GET})
+    @RequestMapping(value = "clients/update", method = {RequestMethod.PUT, RequestMethod.GET})
     public String update(Client client) {
         clientService.save(client);
         return "redirect:/clients";
     }
 
-    @RequestMapping(value="clients/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
+    @RequestMapping(value = "clients/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
     public String delete(Integer id) {
         clientService.delete(id);
         return "redirect:/clients";

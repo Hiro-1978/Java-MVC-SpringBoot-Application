@@ -21,12 +21,12 @@ $('document').ready(function() {
 		var href= $(this).attr('href');
 		$.get(href, function(location, status){
 			$('#idDetails').val(location.id);
-			$('#descriptionDetails').val(location.description);
-			$('#detailsDetails').val(location.details);
 			$('#cityDetails').val(location.city);
 			$('#addressDetails').val(location.address);
 			$('#ddlStateDetails').val(location.stateid);
 			$('#ddlCountryDetails').val(location.countryid);
+			$('#descriptionDetails').val(location.description);
+			$('#detailsDetails').val(location.details);
 			$('#lastModifiedByDetails').val(location.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(location.lastModifiedDate.substr(0,19).replace("T", " "));
 		});

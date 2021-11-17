@@ -447,7 +447,7 @@
                               <td th:text="${employeeType.details}">Details</td>
                               <td>
                                   <div class="btn-group">
-                                      <a class="btn btn-primary" th:href="@{/employeeTypes/findById/(id=${employeeType.id})}"><i class="icon_pencil-edit"></i></a>
+                                      <a class="btn btn-primary" id="editButton" th:href="@{/employeeTypes/findById/(id=${employeeType.id})}"><i class="icon_pencil-edit"></i></a>
                                       <a class="btn btn-success" id="detailsButton" th:href="@{/employeeTypes/findById/(id=${employeeType.id})}"><i class="icon_document_alt"></i></a>
                                       <a class="btn btn-danger"  id="deleteButton" th:href="@{/employeeTypes/delete/(id=${employeeType.id})}"><i class="icon_close_alt2"></i></a>
                                   </div>

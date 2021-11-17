@@ -40,7 +40,7 @@ public class LocationController {
 
     @GetMapping("locations/findById")
     @ResponseBody
-    public Optional<Location> findById(Integer id) {
+    public Optional<Location> findById(int id) {
 
         return locationService.findById(id);
     }

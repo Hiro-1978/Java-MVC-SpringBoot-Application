@@ -447,7 +447,7 @@
                               <td th:text="${location.address}">Address</td>
                               <td>
                                   <div class="btn-group">
-                                      <a class="btn btn-primary" th:href="@{/locations/findById/(id=${location.id})}"><i class="icon_pencil-edit"></i></a>
+                                      <a class="btn btn-primary" id="editButton" th:href="@{/locations/findById/(id=${location.id})}"><i class="icon_pencil-edit"></i></a>
                                       <a class="btn btn-success" id="detailsButton" th:href="@{/locations/findById/(id=${location.id})}"><i class="icon_document_alt"></i></a>
                                       <a class="btn btn-danger"  id="deleteButton" th:href="@{/locations/delete/(id=${location.id})}"><i class="icon_close_alt2"></i></a>
                                   </div>
@@ -632,11 +632,6 @@
                       </div>
 
                       <div class="form-group">
-                          <label for="descriptionDetails" class="col-form-label">Description:</label>
-                          <input type="text" class="form-control" id="descriptionDetails" name="description" required>
-                      </div>
-
-                      <div class="form-group">
                           <label for="cityDetails" class="col-form-label">City:</label>
                           <input type="text" class="form-control" id="cityDetails" name="city" required>
                       </div>
@@ -644,17 +639,6 @@
                       <div class="form-group">
                           <label for="detailsDetails" class="col-form-label">Address:</label>
                           <textarea type="text" class="form-control" id="addressDetails" name="address"></textarea>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="ddlCountryDetails" class="col-form-label">Country: </label>
-                          <select class="form-control" id="ddlCountryDetails" name="countryid">
-                              <option>-SELECT-</option>
-                              <option th:each="country : ${countries}"
-                                      th:value="${country.id}"
-                                      th:text="${country.description}">
-                              </option>
-                          </select>
                       </div>
 
                       <div class="form-group">
@@ -669,18 +653,35 @@
                       </div>
 
                       <div class="form-group">
+                          <label for="ddlCountryDetails" class="col-form-label">Country: </label>
+                          <select class="form-control" id="ddlCountryDetails" name="countryid">
+                              <option>-SELECT-</option>
+                              <option th:each="country : ${countries}"
+                                      th:value="${country.id}"
+                                      th:text="${country.description}">
+                              </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="descriptionDetails" class="col-form-label">Description:</label>
+                          <input type="text" class="form-control" id="descriptionDetails" name="description" required>
+                      </div>
+
+                      <div class="form-group">
                           <label for="detailsAdd" class="col-form-label">Details:</label>
                           <input type="text" class="form-control" id="detailsDetails" name="details">
                       </div>
+
                       <div class="form-group">
                           <label class="col-form-label">Last Updated By:</label>
-                          <input type="text" class="form-control" id="lastModifiedByDetails" name="lastModifiedByDetails" readonly>
+                          <input type="text" class="form-control" id="lastModifiedByDetails" name="lastModifiedBy" readonly>
                       </div>
 
                       <div class="form-group">
                           <label class="col-form-label">Last Updated On:</label>
-                          <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDateDatails" readonly>
+                          <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDate" readonly>
                       </div>
+
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

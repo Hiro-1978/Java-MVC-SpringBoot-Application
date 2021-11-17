@@ -22,12 +22,20 @@ $('document').ready(function() {
 	$('table #detailsButton').on('click',function(event) {
 		event.preventDefault();
 		var href= $(this).attr('href');
-		$.get(href, function(country, status){
-			$('#idDetails').val(country.id);
-			$('#descriptionDetails').val(country.description);
-			$('#codeDetails').val(country.code);
-			$('#lastModifiedByDetails').val(country.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
+		$.get(href, function(client, status){
+			$('#txtAddressDetails').val(client.address);
+			$('#txtCityDetails').val(client.city);
+			$('#ddlCountryDetails').val(client.countryid);
+			$('#txtDetailsDetails').val(client.details);
+			$('#txtEmailDetails').val(client.email);
+			$('#txtIdDetails').val(client.id);
+			$('#txtMobileDetails').val(client.mobile);
+			$('#txtNameDetails').val(client.name);
+			$('#txtPhoneDetails').val(client.phone);
+			$('#ddlStateDetails').val(client.stateid);
+			$('#txtWebsiteDetails').val(client.website);
+			$('#lastModifiedByDetails').val(client.lastModifiedBy);
+			$('#lastModifiedDateDetails').val(client.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});

@@ -26,13 +26,11 @@ public class LocationService {
 
     //Delete Location
     public void delete(int id) {
-
         locationRepository.deleteById(id);
     }
 
     //Update Location
     public void save(Location location) {
-
         locationRepository.save(location);
     }
 }
