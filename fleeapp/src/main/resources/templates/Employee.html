@@ -446,8 +446,8 @@
                           </tr>
                           <tr th:each="employee:${employees}">
                               <td>
-                                  <a id="photoButton" th:href="@{'/img/photos/avatar.jpg'}">
-                                      <img th:src="@{'/img/photos/avatar.jpg'}" width="40" height="40">
+                                  <a id="photoButton" th:href="@{'/img/photos/' + ${employee.id} +'.jpg'}">
+                                      <img th:src="@{'/img/photos/' + ${employee.id} +'.jpg'}" width="40" height="40">
                                   </a>
                               </td>
                               <td th:text="${employee.firstname} + ' ' + ${employee.lastname}">Fullname</td>
@@ -1077,7 +1077,7 @@
                   Are you sure you want to delete the selected record?
               </div>
               <div class="modal-footer">
-                  <a href="" class="btn btn-primary" id="delRef">Yes, Delete</a>
+                  <a href="" class="btn btn-primary" id="confirmDeleteButton">Yes, Delete</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
           </div>

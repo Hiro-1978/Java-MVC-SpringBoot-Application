@@ -71,14 +71,14 @@ $('document').ready(function() {
 		$('#deleteModal').modal();
 	});
 
-	$('.table #photoButton').on('click',function(event) {
+	$('table #photoButton').on('click',function(event) {
 		event.preventDefault();
 		var href = $(this).attr('href');
 		$('#photoModal #employeePhoto').attr('src', href);
 		$('#photoModal').modal();
 	});
 
-	$('#uploadButton').on('click',function(event){
+	$('table #uploadButton').on('click',function(event){
 		var href = $(this).attr('href');
 
 		$.post(href, function(data, status){
