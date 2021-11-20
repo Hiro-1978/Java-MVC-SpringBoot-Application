@@ -16,21 +16,25 @@ public class LocationService {
 
     //Get All Location
     public List<Location> getLocations() {
+
         return (List<Location>) locationRepository.findAll();
     }
 
     //Get Location By Id
     public Optional<Location> findById(int id) {
+
         return locationRepository.findById(id);
     }
 
     //Delete Location
     public void delete(int id) {
+
         locationRepository.deleteById(id);
     }
 
     //Update Location
     public void save(Location location) {
+
         locationRepository.save(location);
     }
 }

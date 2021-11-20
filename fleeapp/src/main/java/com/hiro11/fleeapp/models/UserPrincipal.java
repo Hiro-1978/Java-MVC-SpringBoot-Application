@@ -8,7 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserPrincipal implements UserDetails {
-	
+
 	private User user;
 
 	public UserPrincipal(User user) {
@@ -22,12 +22,12 @@ public class UserPrincipal implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		return this.getPassword();
+		return user.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		return this.getUsername();
+		return user.getUsername();
 	}
 
 	@Override
