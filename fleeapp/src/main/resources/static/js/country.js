@@ -23,8 +23,6 @@ $('document').ready(function() {
 			$('#codeDetails').val(country.code);
             $('#continentDetails').val(country.continent);
             $('#nationalityDetails').val(country.nationality);
-			$('#lastModifiedByDetails').val(country.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});
