@@ -34,8 +34,6 @@ $('document').ready(function() {
 			$('#txtPhoneDetails').val(client.phone);
 			$('#ddlStateDetails').val(client.stateid);
 			$('#txtWebsiteDetails').val(client.website);
-			$('#lastModifiedByDetails').val(client.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(client.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});

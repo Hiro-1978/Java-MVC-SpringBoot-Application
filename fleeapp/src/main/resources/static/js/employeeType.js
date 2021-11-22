@@ -19,6 +19,7 @@ $('document').ready(function() {
 			$('#idDetails').val(employeeType.id);
 			$('#descriptionDetails').val(employeeType.description);
 			$('#detailsDetails').val(employeeType.details);
+			$('#createdByDetails').val(employeeType.createdBy);
 			$('#lastModifiedByDetails').val(employeeType.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(employeeType.lastModifiedDate.substr(0,19).replace("T", " "));
 		});

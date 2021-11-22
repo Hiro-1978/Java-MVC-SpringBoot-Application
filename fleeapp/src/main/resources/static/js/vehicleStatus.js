@@ -19,6 +19,7 @@ $('document').ready(function() {
 			$('#idDetails').val(vehicleStatus.id);
 			$('#descriptionDetails').val(vehicleStatus.description);
 			$('#detailsDetails').val(vehicleStatus.details);
+			$('#createdBy').val(vehicleStatus.createdBy);
 			$('#lastModifiedByDetails').val(vehicleStatus.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(vehicleStatus.lastModifiedDate.substr(0,19).replace("T", " "));
 		});

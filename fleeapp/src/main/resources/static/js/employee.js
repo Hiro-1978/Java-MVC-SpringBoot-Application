@@ -58,8 +58,6 @@ $('document').ready(function() {
 			var hireDate = employee.hireDate.substr(0,10);
 			$('#txtHireDateDetails').val(hireDate);
 			$('#ddlJobTitleDetails').val(employee.jobtitleid);
-			$('#lastModifiedByDetails').val(employee.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(employee.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});
