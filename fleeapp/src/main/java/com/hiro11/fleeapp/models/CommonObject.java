@@ -10,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class CommonObject {
+public class CommonObject extends Auditable<String>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +18,14 @@ public class CommonObject {
     private String description;
     private String details;
 
-    public CommonObject(Integer id, String description, String details) {
+    public CommonObject() {
 
+    }
+
+    public CommonObject(Integer id, String description, String details) {
         this.id = id;
         this.description = description;
         this.details = details;
-    }
-
-    public CommonObject() {
-
     }
 
     public Integer getId() {
@@ -57,6 +56,4 @@ public class CommonObject {
     public String toString() {
         return "CommonObject [id=" + id + ", description=" + description + ", details=" + details + "]";
     }
-
-
 }
