@@ -1,7 +1,9 @@
 package com.hiro11.fleeapp.services;
 
 import com.hiro11.fleeapp.models.Employee;
+import com.hiro11.fleeapp.models.User;
 import com.hiro11.fleeapp.repositories.EmployeeRepository;
+import com.hiro11.fleeapp.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,9 @@ import java.util.Optional;
 public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     //Get All Employees
     public List<Employee> getEmployee(){
@@ -36,5 +41,15 @@ public class EmployeeService {
     //Get Employee by username
     public Employee findByUsername(String un) {
         return employeeRepository.findByUsername(un);
+    }
+
+    //Set the Username of the employee where firstname and lastname match
+    public void assignUsername(int id){
+        Employee employee = employeeRepository.findById(id).orElse(null);
+        User user = userRepository.findByFirstnameAndLastname(
+                employee.getFirstname(),
+                employee.getLastname());
+        employee.setUsername(user.getUsername());
+        employeeRepository.save(employee);
     }
 }

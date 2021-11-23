@@ -63,6 +63,13 @@ public class EmployeeController {
         return "redirect:/employees";
     }
 
+    //Assign Employee Username
+    @RequestMapping(value = "employees/assignUsername")
+    public  String assignUsername(int id){
+        employeeService.assignUsername(id);
+        return "redirect:/employees";
+    }
+
     /*
     @RequestMapping(value="/employees/uploadPhoto", method=RequestMethod.POST, consumes=MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Object> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
