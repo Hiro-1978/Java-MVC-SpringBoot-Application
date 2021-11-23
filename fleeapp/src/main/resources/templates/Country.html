@@ -282,7 +282,7 @@
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
                         <li class="eborder-top">
-                            <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            <a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -502,27 +502,12 @@
 
                     <div class="form-group">
                         <label for="descriptionAdd" class="col-form-label">Description:</label>
-                        <input type="text" class="form-control" id="descriptionAdd" name="description">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="capitalAdd" class="col-form-label">Capital:</label>
-                        <input type="text" class="form-control" id="capitalAdd" name="capital">
+                        <input type="text" class="form-control" id="descriptionAdd" name="description" required>
                     </div>
 
                     <div class="form-group">
                         <label for="codeAdd" class="col-form-label">Code:</label>
-                        <input type="text" class="form-control" id="codeAdd" name="code">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="continentAdd" class="col-form-label">Continent:</label>
-                        <input type="text" class="form-control" id="continentAdd" name="continent">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="nationalityAdd" class="col-form-label">Nationality:</label>
-                        <input type="text" class="form-control" id="nationalityAdd" name="nationality">
+                        <input type="text" class="form-control" id="codeAdd" name="code" required>
                     </div>
 
                     <div class="modal-footer">
@@ -554,27 +539,12 @@
 
                     <div class="form-group">
                         <label for="descriptionEdit" class="col-form-label">Description:</label>
-                        <input type="text" class="form-control" id="descriptionEdit" name="description">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="capitalEdit" class="col-form-label">Capital:</label>
-                        <input type="text" class="form-control" id="capitalEdit" name="capital">
+                        <input type="text" class="form-control" id="descriptionEdit" name="description" required>
                     </div>
 
                     <div class="form-group">
                         <label for="codeEdit" class="col-form-label">Code:</label>
-                        <input type="text" class="form-control" id="codeEdit" name="code">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="continentEdit" class="col-form-label">Continent:</label>
-                        <input type="text" class="form-control" id="continentEdit" name="continent">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="nationalityEdit" class="col-form-label">Nationality:</label>
-                        <input type="text" class="form-control" id="nationalityEdit" name="nationality">
+                        <input type="text" class="form-control" id="codeEdit" name="code" required pattern="[A-Za-z]+">
                     </div>
 
                     <div class="modal-footer">
@@ -606,27 +576,12 @@
 
                     <div class="form-group">
                         <label for="descriptionDetails" class="col-form-label">Description:</label>
-                        <input type="text" class="form-control" id="descriptionDetails" name="description">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="capitalDetails" class="col-form-label">Capital:</label>
-                        <input type="text" class="form-control" id="capitalDetails" name="capital">
+                        <input type="text" class="form-control" id="descriptionDetails" name="description" readonly>
                     </div>
 
                     <div class="form-group">
                         <label for="codeDetails" class="col-form-label">Code:</label>
-                        <input type="text" class="form-control" id="codeDetails" name="code">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="continentDetails" class="col-form-label">Continent:</label>
-                        <input type="text" class="form-control" id="continentDetails" name="continent">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="nationalityDetails" class="col-form-label">Nationality:</label>
-                        <input type="text" class="form-control" id="nationalityDetails" name="nationality">
+                        <input type="text" class="form-control" id="codeDetails" name="code" readonly>
                     </div>
 
                     <div class="modal-footer">

@@ -276,7 +276,7 @@
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                <a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -505,25 +505,25 @@
                                   <div class="form-group row">
                                       <label for="txtNameAdd" class="col-sm-4 col-form-label">Name: </label>
                                       <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Name">
+                                          <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Name" required>
                                       </div>
                                   </div>
                                   <div class="form-group row">
                                       <label for="txtDetailsAdd" class="col-sm-4 col-form-label">Details.: </label>
                                       <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Details">
+                                          <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Details" required>
                                       </div>
                                   </div>
                                   <div class="form-group row">
                                       <label for="txtWebsiteAdd" class="col-sm-4 col-form-label">website: </label>
                                       <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="txtWebsiteAdd" name="website" placeholder="Website">
+                                          <input type="text" class="form-control" id="txtWebsiteAdd" name="website" placeholder="Website" required>
                                       </div>
                                   </div>
                                   <div class="form-group row">
                                       <label for="txtAddressAdd" class="col-sm-4 col-form-label">Address</label>
                                       <div class="col-sm-6">
-                                          <textarea class="form-control" id="txtAddressAdd" name="address" placeholder="Address" rows="2"></textarea>
+                                          <textarea class="form-control" id="txtAddressAdd" name="address" placeholder="Address" rows="2" required></textarea>
                                       </div>
                                   </div>
                               </td>
@@ -531,7 +531,7 @@
                                   <div class="form-group row">
                                       <label for="ddlStateAdd" class="col-sm-4 col-form-label">State/Province: </label>
                                       <div class="col-sm-6">
-                                          <select class="form-control" id="ddlStateAdd" name="stateid">
+                                          <select class="form-control" id="ddlStateAdd" name="stateid" required>
                                               <option>-SELECT-</option>
                                               <option th:each="state : ${states}"
                                                       th:value="${state.id}"
@@ -543,7 +543,7 @@
                                   <div class="form-group row">
                                       <label for="ddlCountryAdd" class="col-sm-4 col-form-label">Country: </label>
                                       <div class="col-sm-6">
-                                          <select class="form-control" id="ddlCountryAdd" name="countryid">
+                                          <select class="form-control" id="ddlCountryAdd" name="countryid" required>
                                               <option>-SELECT-</option>
                                               <option th:each="country : ${countries}"
                                                       th:value="${country.id}"
@@ -555,7 +555,7 @@
                                   <div class="form-group row">
                                       <label for="txtCityAdd" class="col-sm-4 col-form-label">City: </label>
                                       <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="City">
+                                          <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="City" required>
                                       </div>
                                   </div>
                                   <div class="form-group row">
@@ -580,7 +580,6 @@
                               </td>
                           </tr>
                       </table>
-                      <button type="submit" class="btn btn-primary">Sign in</button>
                   </div>
 
                   <div class="modal-footer">
@@ -617,25 +616,25 @@
                                       <div class="form-group row">
                                           <label for="txtNameEdit" class="col-sm-4 col-form-label">Name: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtNameEdit" name="name" placeholder="Name">
+                                              <input type="text" class="form-control" id="txtNameEdit" name="name" placeholder="Name" required>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtDetailsEdit" class="col-sm-4 col-form-label">Details.: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtDetailsEdit" name="details" placeholder="Details">
+                                              <input type="text" class="form-control" id="txtDetailsEdit" name="details" placeholder="Details" required>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtWebsiteEdit" class="col-sm-4 col-form-label">website: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtWebsiteEdit" name="website" placeholder="Website">
+                                              <input type="text" class="form-control" id="txtWebsiteEdit" name="website" placeholder="Website" required>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtAddressEdit" class="col-sm-4 col-form-label">Address</label>
                                           <div class="col-sm-6">
-                                              <textarea class="form-control" id="txtAddressEdit" name="address" placeholder="Address" rows="2"></textarea>
+                                              <textarea class="form-control" id="txtAddressEdit" name="address" placeholder="Address" rows="2" required></textarea>
                                           </div>
                                       </div>
                                   </td>
@@ -643,7 +642,7 @@
                                       <div class="form-group row">
                                           <label for="ddlStateEdit" class="col-sm-4 col-form-label">State/Province: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlStateEdit" name="stateid">
+                                              <select class="form-control" id="ddlStateEdit" name="stateid" required>
                                                   <option>-SELECT-</option>
                                                   <option th:each="state : ${states}"
                                                           th:value="${state.id}"
@@ -655,7 +654,7 @@
                                       <div class="form-group row">
                                           <label for="ddlCountryEdit" class="col-sm-4 col-form-label">Country: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlCountryEdit" name="countryid">
+                                              <select class="form-control" id="ddlCountryEdit" name="countryid" required>
                                                   <option>-SELECT-</option>
                                                   <option th:each="country : ${countries}"
                                                           th:value="${country.id}"
@@ -667,7 +666,7 @@
                                       <div class="form-group row">
                                           <label for="txtCityEdit" class="col-sm-4 col-form-label">City: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtCityEdit" name="city" placeholder="City">
+                                              <input type="text" class="form-control" id="txtCityEdit" name="city" placeholder="City" required>
                                           </div>
                                       </div>
                                       <div class="form-group row">
@@ -692,7 +691,6 @@
                                   </td>
                               </tr>
                           </table>
-                          <button type="submit" class="btn btn-primary">Sign in</button>
                       </form>
                   </div>
                   <div class="modal-footer">
@@ -729,25 +727,25 @@
                                       <div class="form-group row">
                                           <label for="txtNameDetails" class="col-sm-4 col-form-label">Name: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtNameDetails" name="name" placeholder="Name">
+                                              <input type="text" class="form-control" id="txtNameDetails" name="name" placeholder="Name" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtDetailsDetails" class="col-sm-4 col-form-label">Details.: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtDetailsDetails" name="details" placeholder="Details">
+                                              <input type="text" class="form-control" id="txtDetailsDetails" name="details" placeholder="Details" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtWebsiteDetails" class="col-sm-4 col-form-label">website: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtWebsiteDetails" name="website" placeholder="Website">
+                                              <input type="text" class="form-control" id="txtWebsiteDetails" name="website" placeholder="Website" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtAddressDetails" class="col-sm-4 col-form-label">Address</label>
                                           <div class="col-sm-6">
-                                              <textarea class="form-control" id="txtAddressDetails" name="address" placeholder="Address" rows="2"></textarea>
+                                              <textarea class="form-control" id="txtAddressDetails" name="address" placeholder="Address" rows="2" readonly></textarea>
                                           </div>
                                       </div>
                                   </td>
@@ -755,7 +753,7 @@
                                       <div class="form-group row">
                                           <label for="ddlStateDetails" class="col-sm-4 col-form-label">State/Province: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlStateDetails" name="stateid">
+                                              <select class="form-control" id="ddlStateDetails" name="stateid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="state : ${states}"
                                                           th:value="${state.id}"
@@ -767,7 +765,7 @@
                                       <div class="form-group row">
                                           <label for="ddlCountryDetails" class="col-sm-4 col-form-label">Country: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlCountryDetails" name="countryid">
+                                              <select class="form-control" id="ddlCountryDetails" name="countryid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="country : ${countries}"
                                                           th:value="${country.id}"
@@ -779,26 +777,26 @@
                                       <div class="form-group row">
                                           <label for="txtCityDetails" class="col-sm-4 col-form-label">City: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtCityDetails" name="city" placeholder="City">
+                                              <input type="text" class="form-control" id="txtCityDetails" name="city" placeholder="City" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtPhoneDetails" class="col-sm-4 col-form-label">Phone: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtPhoneDetails" name="phone" placeholder="Phone">
+                                              <input type="text" class="form-control" id="txtPhoneDetails" name="phone" placeholder="Phone" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtMobileDetails" class="col-sm-4 col-form-label">Mobile: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtMobileDetails" name="mobile" placeholder="Mobile">
+                                              <input type="text" class="form-control" id="txtMobileDetails" name="mobile" placeholder="Mobile" readonly>
                                           </div>
                                       </div>
 
                                       <div class="form-group row">
                                           <label for="txtEmailDetails" class="col-sm-4 col-form-label">Email</label>
                                           <div class="col-sm-6">
-                                              <input type="email" class="form-control" id="txtEmailDetails" name="email" placeholder="Email">
+                                              <input type="email" class="form-control" id="txtEmailDetails" name="email" placeholder="Email" readonly>
                                           </div>
                                       </div>
                                   </td>

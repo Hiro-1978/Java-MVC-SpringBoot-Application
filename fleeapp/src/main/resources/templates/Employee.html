@@ -276,7 +276,7 @@
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                <a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -660,7 +660,12 @@
                                               </select>
                                           </div>
                                       </div>
-
+                                      <div class="form-group row">
+                                          <label for="fupImageEdit" class="col-sm-4 col-form-label">Select Image: </label>
+                                          <div class="col-sm-6">
+                                              <input type="file" class="form-control-file" id="fupImageEdit" name="photo" placeholder="Select File" required>
+                                          </div>
+                                      </div>
                                   </td>
                               </tr>
                           </table>
@@ -695,7 +700,7 @@
                                       <div class="form-group row">
                                           <label for="txtIdEdit" class="col-sm-4 col-form-label">Id: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtIdEdit" name="id" placeholder="Id">
+                                              <input type="text" class="form-control" id="txtIdEdit" name="id" placeholder="Id" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
@@ -889,13 +894,13 @@
                                       <div class="form-group row">
                                           <label for="txtIdDetails" class="col-sm-4 col-form-label">Id: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtIdDetails" name="id" placeholder="Id">
+                                              <input type="text" class="form-control" id="txtIdDetails" name="id" placeholder="Id" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="ddlTitleDetails" class="col-sm-4 col-form-label">Title: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlTitleDetails" name="title">
+                                              <select class="form-control" id="ddlTitleDetails" name="title" readonly>
                                                   <option>-SELECT-</option>
                                                   <option value="Mr.">Mr.</option>
                                                   <option value="Ms.">Ms.</option>
@@ -905,37 +910,37 @@
                                       <div class="form-group row">
                                           <label for="txtInitialsDetails" class="col-sm-4 col-form-label">Initials: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtInitialsDetails" name="initials" placeholder="Initials">
+                                              <input type="text" class="form-control" id="txtInitialsDetails" name="initials" placeholder="Initials" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtSSNDetails" class="col-sm-4 col-form-label">Social Security No.: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtSSNDetails" name="socialSecurityNumber" placeholder="Social Security Number">
+                                              <input type="text" class="form-control" id="txtSSNDetails" name="socialSecurityNumber" placeholder="Social Security Number" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtFirstnameDetails" class="col-sm-4 col-form-label">Firstname: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtFirstnameDetails" name="firstname" placeholder="Firstname">
+                                              <input type="text" class="form-control" id="txtFirstnameDetails" name="firstname" placeholder="Firstname" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtLastnameDetails" class="col-sm-4 col-form-label">Lastname: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtLastnameDetails" name="lastname" placeholder="Lastname">
+                                              <input type="text" class="form-control" id="txtLastnameDetails" name="lastname" placeholder="Lastname" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtOthernameDetails" class="col-sm-4 col-form-label">Othername: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtOthernameDetails" name="othername" placeholder="Othername">
+                                              <input type="text" class="form-control" id="txtOthernameDetails" name="othername" placeholder="Othername" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="ddlGenderDetails" class="col-sm-4 col-form-label">Gender: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlGenderDetails" name="gender">
+                                              <select class="form-control" id="ddlGenderDetails" name="gender" readonly>
                                                   <option>-SELECT-</option>
                                                   <option value="MALE">MALE</option>
                                                   <option value="FEMALE">FEMALE</option>
@@ -945,7 +950,7 @@
                                       <div class="form-group row">
                                           <label for="ddlNationalityDetails" class="col-sm-4 col-form-label">Nationality: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlNationalityDetails" name="countryid">
+                                              <select class="form-control" id="ddlNationalityDetails" name="countryid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="country : ${countries}"
                                                           th:value="${country.id}"
@@ -957,7 +962,7 @@
                                       <div class="form-group row">
                                           <label for="txtAddressDetails" class="col-sm-4 col-form-label">Address</label>
                                           <div class="col-sm-6">
-                                              <textarea class="form-control" id="txtAddressDetails" name="address" placeholder="Address" rows="2"></textarea>
+                                              <textarea class="form-control" id="txtAddressDetails" name="address" placeholder="Address" rows="2" readonly></textarea>
                                           </div>
                                       </div>
                                   </td>
@@ -965,19 +970,19 @@
                                       <div class="form-group row">
                                           <label for="txtDateOfBirthDetails" class="col-sm-4 col-form-label">Date of Birth:</label>
                                           <div class="col-sm-6">
-                                              <input type="date" class="form-control" id="txtDateOfBirthDetails" name="DateOfBirth" placeholder="Date of Birth">
+                                              <input type="date" class="form-control" id="txtDateOfBirthDetails" name="DateOfBirth" placeholder="Date of Birth" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtHireDateDetails" class="col-sm-4 col-form-label">Hire Date:</label>
                                           <div class="col-sm-6">
-                                              <input type="date" class="form-control" id="txtHireDateDetails" name="hireDate" placeholder="Hire Date">
+                                              <input type="date" class="form-control" id="txtHireDateDetails" name="hireDate" placeholder="Hire Date" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="ddlStateDetails" class="col-sm-4 col-form-label">State/Province: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlStateDetails" name="stateid">
+                                              <select class="form-control" id="ddlStateDetails" name="stateid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="state : ${states}"
                                                           th:value="${state.id}"
@@ -989,25 +994,25 @@
                                       <div class="form-group row">
                                           <label for="txtCityDetails" class="col-sm-4 col-form-label">City: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtCityDetails" name="city" placeholder="City">
+                                              <input type="text" class="form-control" id="txtCityDetails" name="city" placeholder="City" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtPhoneDetails" class="col-sm-4 col-form-label">Phone: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtPhoneDetails" name="phone" placeholder="Phone">
+                                              <input type="text" class="form-control" id="txtPhoneDetails" name="phone" placeholder="Phone" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="txtMobileDetails" class="col-sm-4 col-form-label">Mobile: </label>
                                           <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="txtMobileDetails" name="mobile" placeholder="Mobile">
+                                              <input type="text" class="form-control" id="txtMobileDetails" name="mobile" placeholder="Mobile" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="ddlMaritalStatusDetails" class="col-sm-4 col-form-label">Marital Status: </label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlMaritalStatusDetails" name="maritalStatus">
+                                              <select class="form-control" id="ddlMaritalStatusDetails" name="maritalStatus" readonly>
                                                   <option>-SELECT-</option>
                                                   <option value="orange">Married</option>
                                                   <option value="pear">Single</option>
@@ -1017,13 +1022,13 @@
                                       <div class="form-group row">
                                           <label for="txtEmailDetails" class="col-sm-4 col-form-label">Email</label>
                                           <div class="col-sm-6">
-                                              <input type="email" class="form-control" id="txtEmailDetails" name="email" placeholder="Email">
+                                              <input type="email" class="form-control" id="txtEmailDetails" name="email" placeholder="Email" readonly>
                                           </div>
                                       </div>
                                       <div class="form-group row">
                                           <label for="ddlJobTitleDetails" class="col-sm-4 col-form-label">Job Title</label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlJobTitleDetails" name="jobtitleid">
+                                              <select class="form-control" id="ddlJobTitleDetails" name="jobtitleid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="jobTitle : ${jobTitles}"
                                                           th:value="${jobTitle.id}"
@@ -1035,19 +1040,13 @@
                                       <div class="form-group row">
                                           <label for="ddlEmployeeTypeDetails" class="col-sm-4 col-form-label">Employee Type</label>
                                           <div class="col-sm-6">
-                                              <select class="form-control" id="ddlEmployeeTypeDetails" name="employeetypeid">
+                                              <select class="form-control" id="ddlEmployeeTypeDetails" name="employeetypeid" readonly>
                                                   <option>-SELECT-</option>
                                                   <option th:each="employeeType : ${employeeTypes}"
                                                           th:value="${employeeType.id}"
                                                           th:text="${employeeType.description}">
                                                   </option>
                                               </select>
-                                          </div>
-                                      </div>
-                                      <div class="form-group row">
-                                          <label for="fupImageDetails" class="col-sm-4 col-form-label">Select Image: </label>
-                                          <div class="col-sm-6">
-                                              <input type="file" class="form-control-file" id="fupImageDetails" name="photo" placeholder="Select File">
                                           </div>
                                       </div>
                                   </td>

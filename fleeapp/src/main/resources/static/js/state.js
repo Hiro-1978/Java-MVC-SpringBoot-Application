@@ -23,8 +23,6 @@ $('document').ready(function() {
 			$('#codeDetails').val(state.code);
             $('#capitalDetails').val(state.capital);
 			$('#detailsDetails').val(state.details);
-			$('#lastModifiedByDetails').val(state.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});
